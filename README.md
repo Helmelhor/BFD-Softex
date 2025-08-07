@@ -30,5 +30,12 @@ $ git status
 $ git add .
 
 # Adiciona um arquivo específico ao stage
-$ git add pasta\caminho_arquivo
+$ git add pasta\caminho_arquivo 
+
+#Commit
+$ git commit -m "Comentario do commit"
+
+#Sobe do repositorio local para o remoto
+$ git push
+
 ```
