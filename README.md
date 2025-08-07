@@ -38,4 +38,6 @@ $ git commit -m "Comentario do commit"
 #Sobe do repositorio local para o remoto
 $ git push
 
+#Desce do repositorio remoto pro local
+$ git pull
 ```
