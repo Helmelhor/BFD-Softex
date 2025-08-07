@@ -1,4 +1,4 @@
-# BFD-Softex
+# BFD-Softex Especialização em Python
 
 ## O que é?
 
