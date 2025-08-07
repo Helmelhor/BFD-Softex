@@ -2,4 +2,6 @@
 
 ## O que é?
 
-[Saiba mais sobre Bolsa Futuro Digital da Softex](https://bfd.softexpe.org.br/)
+O Bolsa Futuro Digital (BFD) é uma iniciativa da Softex focada em promover a aprendizagem e especialização em Python, capacitando profissionais para o mercado de tecnologia.
+
+[Saiba mais sobre o Bolsa Futuro Digital da Softex](https://bfd.softexpe.org.br/)
