@@ -8,8 +8,6 @@ O Bolsa Futuro Digital (BFD) é uma iniciativa da Softex e do Governo Federal fo
 
 ## Git/GitHub: Passo a Passo no Terminal
 
-Aqui está um guia básico para configurar e usar o Git no terminal:
-
 ```bash
 # Configura o nome do usuário
 $ git config --global user.name "Helmer Barcelos"
