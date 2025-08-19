@@ -10,9 +10,7 @@ print(msg.upper()) # Deixa tudo em maiúsculas
 print(msg.replace("incrível", "poderoso")) # Troca "incrível" por "poderoso"
 
 #3
-
 numeros = [10,20,30,40,50]
-
 print(f"terceiro elemento: {numeros[2]}")
 numeros.append(60)
 numeros.remove(20)
