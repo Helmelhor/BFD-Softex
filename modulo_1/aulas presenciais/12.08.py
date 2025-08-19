@@ -64,5 +64,5 @@ print("Questão 10")
 preco_produto = 20
 print(f"O preço do produto é {preco_produto}")
 valor_pago = float(input("Quanto você quer pagar? "))
-troco = preco_produto - valor_pago
+troco = valor_pago - preco_produto
 print(f"O troco será de: R${int(troco)}")
