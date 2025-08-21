@@ -12,9 +12,16 @@ print(id(lista))
 print(id(lista2))
 
 #4
-numeros = [1,2,3]
-soma = (numeros[0] * 5) + (numeros[1]*5) + (numeros[2]*5)
-lista_soma = [soma]
+lista = [1,2,3,4,5]
+lista_multiplicacao = []
+cont = 0
+
+while cont < 5:
+    lista_multiplicacao.append(lista[cont] * 5)
+    cont+=1
+
+print(lista_multiplicacao)
+
 
 #5
 list = [ 1,2,3,4,5,6]
