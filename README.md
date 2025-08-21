@@ -39,3 +39,30 @@ $ git push
 #Desce do repositorio remoto pro local
 $ git pull
 ```
+
+## Como criar um ambiente virtual ? (power shell) 
+
+
+iniciar
+
+```powershell
+python -m venv nome_do_ambiente
+```
+
+(criando com versão do específica do python)
+
+```powershell
+py -3.11 -m venv nome_do_ambiente
+```
+
+permissão termporaria caso não tenha permissão do adm
+
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope Process -Force
+```
+
+ativação do ambiente
+
+```powershell
+nome_do_ambiente\Scripts\activate
+```
