@@ -75,10 +75,11 @@ while cont <= 2:
 notas += notas1
 notas += notas2
 print(notas)
-statistics.mean(notas1)
-statistics.mean(notas2)
+print(f"Media aluno 1: {statistics.mean(notas1)}")
+print(f"Media aluno 2: {statistics.mean(notas2)}")
 
 
+tabuleiro_vazio = [[" " for _ in range(8)] for _ in range(8)]
 # 11- Usando list comprehension, crie um tabuleiro de xadrez vazio e depois adicione todas as peças do jogo na posição inicial. Para melhorar a visualização do tabuleiro, identifique as posições do tabuleiro da seguinte forma:
 # [ ] - para posições vazias
 # tor - para a torre
@@ -87,3 +88,19 @@ statistics.mean(notas2)
 # rai - para a rainha
 # rei - para o rei
 # pea - para o peão
+
+tabuleiro_vazio = [[" " for _ in range(8)] for _ in range(8)]
+
+linha_pecas = ["tor", "cav", "bis", "rai", "rei", "bis", "cav", "tor"]
+linha_peoes = ["pea"] * 8
+linha_vazia = [" "] * 8
+tabuleiro = [
+    linha_pecas,
+    linha_peoes,
+    *[[" " for _ in range(8)] for _ in range(4)],
+    linha_peoes,
+    linha_pecas
+]
+
+for linha in tabuleiro:
+    print(linha)
