@@ -41,21 +41,71 @@ class ContaBancaria:
         self.titular = titular
         self.saldo = saldo
 
-    def depositar(valor):
-        saldo = saldo + valor
-        return saldo
+    def depositar(self, valor):
+        self.saldo = self.saldo + valor
+        return self.saldo
     
-    def sacar(valor):
-        if saldo < valor:
+    def sacar(self,valor):
+        if self.saldo < valor:
             print("saldo insuficiente!")
+            return False
         else:
-            saldo = saldo - valor
-            return saldo
+            self.saldo = self.saldo - valor
+            print(f"Saque no valor de R${valor} realizado com sucesso!")
+            return True
+            
 
 ContaHelmer = ContaBancaria("helmer", 100)
-        
+
+ContaHelmer.depositar(100)
+print(ContaHelmer.saldo)
+ContaHelmer.sacar(20)
+print(ContaHelmer.saldo)        
 
 # 6. Modifique a classe ContaBancaria para que o método sacar retorne True se a operação for bem-sucedida e False caso contrário. Teste o retorno e imprima mensagens adequadas.
+print(ContaHelmer.sacar(30))
+print(ContaHelmer.sacar(500))
 # 7. Crie uma classe Aluno com atributos nome e nota. Depois crie uma classe Turma que tenha uma lista de alunos e um método adicionar_aluno(aluno). Crie alguns objetos Aluno e adicione-os à turma.
+class Aluno:
+    def __init__(self, nome, nota):
+        self.nome = nome
+        self.nota = nota
+    
+    def __str__(self):
+        return f"Nome do Aluno: {self.nome}\nNota do Aluno: {self.nota}"
+    
+class Turma:
+    
+    lista_alunos = []
+
+    def adicionar_aluno(self,aluno):
+        self.lista_alunos.append(aluno)
+
+turma1 = Turma()
+
+helmer = Aluno("helmer", 10)
+ana_clara = Aluno("Ana Clara", 7.8)
+
+turma1.adicionar_aluno(helmer)
+turma1.adicionar_aluno(ana_clara)
+
+for aluno in turma1.lista_alunos:
+    print(aluno)
+
 # 8. Na classe Aluno, implemente o método __str__ para que, ao imprimir um objeto da classe, apareça algo como:"Aluno: Maria - Nota: 9.5". Teste imprimindo os objetos.
+#feito.
+
 # 9. Crie uma classe Cachorro com um atributo de classe especie = "Canis familiaris" e atributos de instância nome e idade. Mostre a diferença entre acessar especie pelo objeto e pela classe.
+class Cachorro:
+    especie = "Canis familiaris"
+
+    def __init__(self,nome,idade):
+        self.nome = nome
+        self.idade = idade
+
+
+print(f"Acessando pela classe: {Cachorro.especie}")
+
+doguinho = Cachorro("princesa", 2)
+
+print(f"Acessando pelo objeto: {doguinho.especie}")
