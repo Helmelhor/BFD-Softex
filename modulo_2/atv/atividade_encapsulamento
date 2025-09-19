@@ -1,0 +1,63 @@
+# 1. Na classe ContaBancaria, converta saldo para um atributo privado. Crie um método setter e um getter para acessar e modificar esse atributo, seguindo uma regra lógica (Ex: saldo não pode ser negativo)
+class ContaBancaria:
+    def __init__(self, titular:str, saldo:float):
+        self.titular = titular
+        self.__saldo = saldo
+
+    def depositar(self, valor):
+        self.__saldo = self.__saldo + valor
+        return self.__saldo
+    
+    def sacar(self,valor):
+        if self.__saldo < valor:
+            print("saldo insuficiente!")
+            return False
+        else:
+            self.__saldo = self.__saldo - valor
+            print(f"Saque no valor de R${valor} realizado com sucesso!")
+            return True
+        
+    def get_saldo(self):
+        return self.__saldo
+    
+    def set_saldo(self, valor):
+        if valor >= 0:
+            self.__saldo = valor
+        else:
+            print("saldo não pode ser negativo")
+
+
+conta_helmer = ContaBancaria("helmer", 100)
+
+print(conta_helmer.get_saldo())
+
+conta_helmer.set_saldo(200)
+print(conta_helmer.get_saldo())
+
+# 2. Crie uma classe Pessoa, que tenha os atributos: nome, data de nascimento, cpf, identidade. Deixe os atributos cpf e identidade como privado e monte os métodos setters e getters para acessar e editar os valores
+
+class pessoa:
+    def __init__(self, nome, aniversario, cpf, rg):
+        self.nome = nome
+        self.aniversario = aniversario
+        self.__cpf = cpf
+        self.__rg = rg
+
+    def get_cpf(self):
+        return self.__cpf
+    def get_rg(self):
+        return self.__rg
+    
+    def set_cpf(self, valor_novo):
+        self.__cpf = valor_novo
+
+    def set_rg(self, valor_novo):
+        self.__rg = valor_novo
+
+helmer = pessoa("Helmer","22/12/2005","12345678911","1123456")
+
+helmer.set_cpf(88899944435)
+print(helmer.get_cpf())
+
+helmer.set_rg(8910432)
+print(helmer.get_rg())
