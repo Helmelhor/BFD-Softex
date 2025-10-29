@@ -16,7 +16,7 @@ for aluno in alunos:
 
 #3 Obtenha a media entre nota1 e nota2 dos alunos, ordene em ordem decrescente e retorne apenas os 10 maiores notas. No fim imprima na tela a lista desses alunos e suas médias.
 cursor.execute(
-    "Select id, nome, nota1, nota2, (nota1 + nota2 / 2) as media From Aluno Order BY media DESC LIMIT 10"
+    "Select id, nome, nota1, nota2, (nota1 + nota2) / 2 as media From Aluno Order BY media DESC LIMIT 10"
 )
 top10_alunos = cursor.fetchall()
 print("\nMaiores notas")
